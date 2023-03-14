@@ -1,0 +1,15 @@
+.inputContainer {
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: rgb(247, 247, 247) 0px 0px 0px 1px inset;
+
+  input {
+    border: none;
+  }
+  input:focus {
+    outline: none;
+  }
+  input::placeholder {
+    color: rgb(153, 153, 153);
+  }
+}

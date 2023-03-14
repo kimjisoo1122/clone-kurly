@@ -1,0 +1,16 @@
+.inputContainer {
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: rgb(247, 247, 247) 0px 0px 0px 1px inset;
+}
+.inputContainer input {
+  border: none;
+}
+.inputContainer input:focus {
+  outline: none;
+}
+.inputContainer input::placeholder {
+  color: rgb(153, 153, 153);
+}
+
+/*# sourceMappingURL=Input.module.css.map */

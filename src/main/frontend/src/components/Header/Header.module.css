@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap");
+.headerContainer {
+  height: 150px;
+  width: 75vw;
+  margin: 0 auto;
+}
+
+.topLinkContainer {
+  height: 20%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.topLinkContainer .topLinkList {
+  list-style: none;
+  display: flex;
+  font-size: 0.7em;
+  font-family: "Nanum Gothic", sans-serif;
+  font-weight: 700;
+  color: #555;
+  cursor: pointer;
+}
+.topLinkContainer .topLinkList > li {
+  padding: 0 10px;
+}
+.topLinkContainer .topLinkList .sign {
+  color: rgb(95, 0, 128);
+}
+.topLinkContainer .topLinkList .sign, .topLinkContainer .topLinkList .login {
+  border-right: 1px solid #333;
+}
+.topLinkContainer .topLinkList .faq {
+  position: relative;
+  display: inline-block;
+}
+.topLinkContainer .topLinkList .faq:hover > .faqList, .topLinkContainer .topLinkList .faqList:hover {
+  display: block;
+}
+.topLinkContainer .faqList {
+  position: absolute;
+  right: 0;
+  width: 100px;
+  text-align: left;
+  display: none;
+  background-color: white;
+}
+.topLinkContainer .faqList ul {
+  margin-top: 10px;
+  border: 1px solid #eee;
+}
+.topLinkContainer .faqList li {
+  padding: 5px 10px;
+}
+
+.mainContainer {
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.mainContainer .mainLogo {
+  display: flex;
+  align-items: center;
+  width: 300px;
+}
+.mainContainer .mainLogo img {
+  width: 90px;
+}
+.mainContainer .mainLogo h1 {
+  padding-left: 20px;
+  color: rgb(95, 0, 128);
+  font-weight: 600;
+  font-size: 1.3em;
+  font-family: "Nanum Gothic", sans-serif;
+  width: 100px;
+}
+.mainContainer .mainSearch {
+  width: 400px;
+  border: 1.5px solid rgb(95, 0, 128);
+  border-radius: 5px;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.mainContainer .mainSearch .mainSearchIcon {
+  color: rgb(95, 0, 128);
+  margin-right: 10px;
+  font-size: 1.2em;
+}
+.mainContainer .mainIcon {
+  width: 300px;
+  color: #333;
+  display: flex;
+  font-size: 2em;
+  justify-content: flex-end;
+}
+.mainContainer .mainIcon > :nth-child(1) {
+  margin-right: 7px;
+}
+.mainContainer .mainIcon div {
+  margin-left: 20px;
+}
+.mainContainer .mainIcon div:hover {
+  color: rgb(95, 0, 128);
+  cursor: pointer;
+}
+
+.categoryContainer {
+  height: 30%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.categoryContainer .categoryTitle {
+  display: flex;
+  width: 100px;
+  justify-content: space-between;
+  align-items: center;
+}
+.categoryContainer .categoryTitle .categoryTitleIcon {
+  font-size: 1.8em;
+}
+.categoryContainer .categoryList {
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
+}
+.categoryContainer .categoryDelivery {
+  font-family: "Nanum Gothic", sans-serif;
+  font-size: 0.7em;
+  font-weight: 700;
+  border: 1px solid #eee;
+  padding: 10px 15px;
+  border-radius: 20px;
+  width: 10vw;
+}
+.categoryContainer .categoryDelivery * {
+  display: inline-block;
+}
+.categoryContainer .categoryDelivery :first-child {
+  color: rgb(95, 0, 128);
+  margin-right: 5px;
+}
+
+/*# sourceMappingURL=Header.module.css.map */

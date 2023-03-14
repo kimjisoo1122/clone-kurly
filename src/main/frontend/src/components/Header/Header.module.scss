@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap');
+.headerContainer {
+  height: 150px;
+  width: 75vw;
+  margin: 0 auto;
+}
+
+$mainColor: rgb(95, 0, 128);
+$mainFont: 'Nanum Gothic', sans-serif;
+
+.topLinkContainer {
+  height: 20%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  .topLinkList {
+    list-style: none;
+    display: flex;
+    font-size: 0.7em;
+    font-family: $mainFont;
+    font-weight: 700;
+    color: #555;
+    cursor: pointer;
+
+    > li {
+      padding: 0 10px;
+    }
+    .sign {
+      color: $mainColor;
+    }
+    .sign, .login {
+      border-right: 1px solid #333;
+    }
+    .faq {
+      position: relative;
+      display: inline-block;
+    }
+    .faq:hover > .faqList, .faqList:hover {
+      display: block;
+    }
+  }
+
+  .faqList {
+    position: absolute;
+    right: 0;
+    width: 100px;
+    text-align: left;
+    display: none;
+    background-color: white;
+
+    ul {
+      margin-top: 10px;
+      border: 1px solid #eee;
+    }
+    li {
+      padding: 5px 10px;
+    }
+  }
+}
+
+.mainContainer {
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .mainLogo {
+    display: flex;
+    align-items: center;
+    width: 300px;
+
+    img {
+      width: 90px;
+    }
+    h1 {
+      padding-left: 20px;
+      color: $mainColor;
+      font-weight: 600;
+      font-size: 1.3em;
+      font-family: $mainFont;
+      width: 100px;
+    }
+  }
+
+  .mainSearch {
+    width: 400px;
+    border: 1.5px solid $mainColor;
+    border-radius: 5px;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .mainSearchIcon {
+      color: $mainColor;
+      margin-right: 10px;
+      font-size: 1.2em;
+    }
+  }
+
+  .mainIcon {
+    width: 300px;
+    color: #333;
+    display: flex;
+    font-size: 2em;
+    justify-content: flex-end;
+
+    >:nth-child(1) {
+      margin-right: 7px;
+    }
+
+    div {
+      margin-left: 20px;
+    }
+
+    div:hover {
+      color: $mainColor;
+      cursor: pointer;
+    }
+  }
+}
+
+.categoryContainer {
+  height: 30%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .categoryTitle {
+    display: flex;
+    width: 100px;
+    justify-content: space-between;
+    align-items: center;
+
+    .categoryTitleIcon {
+      font-size: 1.8em;
+    }
+    span {
+    }
+  }
+
+  .categoryList {
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .categoryDelivery {
+    font-family: $mainFont;
+    font-size: 0.7em;
+    font-weight: 700;
+    border: 1px solid #eee;
+    padding: 10px 15px;
+    border-radius: 20px;
+    width: 10vw;
+
+
+    * {
+      display: inline-block;
+      //width: 50px;
+    }
+    :first-child {
+      color: $mainColor;
+      margin-right: 5px;
+    }
+  }
+}
