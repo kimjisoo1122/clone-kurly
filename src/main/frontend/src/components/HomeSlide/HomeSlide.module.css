@@ -1,0 +1,67 @@
+.container {
+  position: relative;
+  overflow: hidden;
+}
+
+.homeSlideContainer {
+  height: 300px;
+  transition: all 0.5s;
+}
+
+.homeSlideImg {
+  display: flex;
+  height: 100%;
+  width: 100vw;
+}
+.homeSlideImg img {
+  display: block;
+  width: 100%;
+}
+
+.homeSlideContainer:hover ~ .homeSlideBtn, .homeSlideBtn:hover {
+  opacity: 1;
+}
+
+.homeSlideIndex {
+  position: absolute;
+  bottom: 20px;
+  right: 300px;
+  padding: 5px 10px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  color: white;
+  font-size: 12px;
+}
+
+.homeSlideBtn {
+  position: absolute;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all 0.5s;
+}
+.homeSlideBtn span {
+  padding-bottom: 5px;
+}
+
+.homeSlideLeftBtn {
+  left: 120px;
+  top: 50%;
+}
+
+.homeSlideRightBtn {
+  right: 120px;
+  top: 50%;
+}
+
+/*# sourceMappingURL=HomeSlide.module.css.map */

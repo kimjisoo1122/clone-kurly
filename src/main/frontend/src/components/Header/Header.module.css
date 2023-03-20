@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap");
 .headerContainer {
   height: 150px;
-  width: 75vw;
+  width: 1050px;
   margin: 0 auto;
 }
 
@@ -14,13 +14,13 @@
 .topLinkContainer .topLinkList {
   list-style: none;
   display: flex;
-  font-size: 0.7em;
   font-family: "Nanum Gothic", sans-serif;
+  font-size: 12px;
   font-weight: 700;
-  color: #555;
+  color: #777;
   cursor: pointer;
 }
-.topLinkContainer .topLinkList > li {
+.topLinkContainer .topLinkList .topLink {
   padding: 0 10px;
 }
 .topLinkContainer .topLinkList .sign {
@@ -33,10 +33,10 @@
   position: relative;
   display: inline-block;
 }
-.topLinkContainer .topLinkList .faq:hover > .faqList, .topLinkContainer .topLinkList .faqList:hover {
+.topLinkContainer .topLinkList .faq:hover > .faqListContainer, .topLinkContainer .topLinkList .faqListContainer:hover {
   display: block;
 }
-.topLinkContainer .faqList {
+.topLinkContainer .faqListContainer {
   position: absolute;
   right: 0;
   width: 100px;
@@ -44,11 +44,11 @@
   display: none;
   background-color: white;
 }
-.topLinkContainer .faqList ul {
+.topLinkContainer .faqListContainer .faqList {
   margin-top: 10px;
   border: 1px solid #eee;
 }
-.topLinkContainer .faqList li {
+.topLinkContainer .faqListContainer .faq {
   padding: 5px 10px;
 }
 
@@ -69,8 +69,8 @@
 .mainContainer .mainLogo h1 {
   padding-left: 20px;
   color: rgb(95, 0, 128);
-  font-weight: 600;
-  font-size: 1.3em;
+  font-weight: 700;
+  font-size: 18px;
   font-family: "Nanum Gothic", sans-serif;
   width: 100px;
 }
@@ -86,22 +86,22 @@
 .mainContainer .mainSearch .mainSearchIcon {
   color: rgb(95, 0, 128);
   margin-right: 10px;
-  font-size: 1.2em;
+  font-size: 18px;
 }
-.mainContainer .mainIcon {
+.mainContainer .mainIconContainer {
   width: 300px;
   color: #333;
   display: flex;
-  font-size: 2em;
+  font-size: 30px;
   justify-content: flex-end;
 }
-.mainContainer .mainIcon > :nth-child(1) {
+.mainContainer .mainIconContainer .mainIconLocation {
   margin-right: 7px;
 }
-.mainContainer .mainIcon div {
+.mainContainer .mainIconContainer .mainIcon {
   margin-left: 20px;
 }
-.mainContainer .mainIcon div:hover {
+.mainContainer .mainIconContainer .mainIcon:hover {
   color: rgb(95, 0, 128);
   cursor: pointer;
 }
@@ -111,36 +111,54 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  cursor: pointer;
+  font-family: "Nanum Gothic", sans-serif;
 }
-.categoryContainer .categoryTitle {
+.categoryContainer .categoryTitleContainer {
   display: flex;
   width: 100px;
   justify-content: space-between;
   align-items: center;
+  padding-bottom: 3px;
 }
-.categoryContainer .categoryTitle .categoryTitleIcon {
-  font-size: 1.8em;
+.categoryContainer .categoryTitleContainer .categoryTitleIcon {
+  font-size: 26px;
+}
+.categoryContainer .categoryTitleContainer .categoryTitle {
+  font-size: 15px;
+  font-weight: 700;
+}
+.categoryContainer .categoryTitleContainer:hover {
+  color: rgb(95, 0, 128);
 }
 .categoryContainer .categoryList {
+  font-weight: 700;
+  font-size: 15px;
   width: 500px;
   display: flex;
   justify-content: space-between;
 }
-.categoryContainer .categoryDelivery {
+.categoryContainer .categoryList li {
+  padding-bottom: 3px;
+}
+.categoryContainer .categoryList li:hover {
+  color: rgb(95, 0, 128);
+  border-bottom: 1px solid rgb(95, 0, 128);
+}
+.categoryContainer .categoryDeliveryContainer {
   font-family: "Nanum Gothic", sans-serif;
-  font-size: 0.7em;
+  font-size: 12px;
   font-weight: 700;
   border: 1px solid #eee;
   padding: 10px 15px;
   border-radius: 20px;
-  width: 10vw;
 }
-.categoryContainer .categoryDelivery * {
-  display: inline-block;
-}
-.categoryContainer .categoryDelivery :first-child {
+.categoryContainer .categoryDeliveryContainer .categoryDelivery {
   color: rgb(95, 0, 128);
   margin-right: 5px;
+}
+.categoryContainer .categoryDeliveryContainer .categoryDeliveryGuide {
+  color: #777;
 }
 
 /*# sourceMappingURL=Header.module.css.map */
