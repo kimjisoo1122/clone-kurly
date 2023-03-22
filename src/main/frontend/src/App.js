@@ -8,10 +8,10 @@ function App() {
   return (
       <React.Fragment>
         <Reset/>
-          <>
+          <div style={{height: '2000px'}}>
             <Header></Header>
-            <Home></Home>
-          </>
+            {/*<Home></Home>*/}
+          </div>
       </React.Fragment>
   );
 }

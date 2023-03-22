@@ -64,4 +64,13 @@
   top: 50%;
 }
 
+@media (max-width: 1050px) {
+  .homeSlideBtn, .homeSlideIndex {
+    display: none;
+  }
+  .homeSlideImg, .container {
+    width: 1050px;
+  }
+}
+
 /*# sourceMappingURL=HomeSlide.module.css.map */

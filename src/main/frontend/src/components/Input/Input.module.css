@@ -1,10 +1,10 @@
 .inputContainer {
   padding: 10px;
   border-radius: 5px;
-  box-shadow: rgb(247, 247, 247) 0px 0px 0px 1px inset;
 }
 .inputContainer input {
   border: none;
+  width: 100%;
 }
 .inputContainer input:focus {
   outline: none;

@@ -6,6 +6,7 @@
 .homeSlideContainer {
   height: 300px;
   transition: all 0.5s;
+
 }
 .homeSlideImg {
   display: flex;
@@ -20,7 +21,6 @@
 .homeSlideContainer:hover ~ .homeSlideBtn, .homeSlideBtn:hover{
   opacity: 1;
 }
-
 
 .homeSlideIndex {
   position: absolute;
@@ -63,4 +63,14 @@
 .homeSlideRightBtn {
   right: 120px;
   top: 50%;
+}
+
+@media (max-width: 1050px){
+  .homeSlideBtn, .homeSlideIndex {
+    display: none;
+  }
+  .homeSlideImg, .container {
+    width: 1050px;
+  }
+
 }

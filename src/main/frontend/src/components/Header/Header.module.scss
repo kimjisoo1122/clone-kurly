@@ -50,7 +50,7 @@ $mainFont: 'Nanum Gothic', sans-serif;
   .faqListContainer {
     position: absolute;
     right: 0;
-    width: 100px;
+    width: 130px;
     text-align: left;
     display: none;
     background-color: white;
@@ -100,32 +100,37 @@ $mainFont: 'Nanum Gothic', sans-serif;
     justify-content: space-between;
     align-items: center;
 
+    > :first-child {
+      width: 90%;
+    }
+
     .mainSearchIcon {
       color: $mainColor;
       margin-right: 10px;
       font-size: 18px;
-    }
-  }
-
-  .mainIconContainer {
-    width: 300px;
-    color: #333;
-    display: flex;
-    font-size: 30px;
-    justify-content: flex-end;
-
-    .mainIconLocation {
-      margin-right: 7px;
-    }
-
-    .mainIcon {
-      margin-left: 20px;
-    }
-
-    .mainIcon:hover {
-      color: $mainColor;
       cursor: pointer;
     }
+  }
+}
+
+.mainIconContainer {
+  width: 300px;
+  color: #333;
+  display: flex;
+  font-size: 30px;
+  justify-content: flex-end;
+
+  .mainIconLocation {
+    margin-right: 7px;
+  }
+
+  .mainIcon {
+    margin-left: 20px;
+  }
+
+  .mainIcon:hover {
+    color: $mainColor;
+    cursor: pointer;
   }
 }
 
@@ -136,6 +141,7 @@ $mainFont: 'Nanum Gothic', sans-serif;
   align-items: center;
   cursor: pointer;
   font-family: $mainFont;
+
 
   .categoryTitleContainer {
     display: flex;
@@ -159,6 +165,7 @@ $mainFont: 'Nanum Gothic', sans-serif;
   }
 
   .categoryList {
+    padding: 5px 0;
     font-weight: 700;
     font-size: 15px;
     width: 500px;
@@ -166,6 +173,7 @@ $mainFont: 'Nanum Gothic', sans-serif;
     justify-content: space-between;
 
     li {
+      border: 1px solid rgba(0, 0, 0, 0);
       padding-bottom: 3px;
     }
 
@@ -194,3 +202,53 @@ $mainFont: 'Nanum Gothic', sans-serif;
     }
   }
 }
+
+.subSearch {
+  display: flex;
+  align-items: center;
+  background-color: rgb(247, 247, 247);
+  border-radius: 5px;
+  height: 30px;
+  font-size: 12px;
+  margin-left: 40px;
+
+  > :first-child input {
+    background-color: rgb(247, 247, 247);
+  }
+
+  > :first-child input:focus {
+    background-color: white;
+  }
+
+  > :first-child > :first-child::placeholder {
+    font-size: 11px;
+    font-family: $mainFont;
+    color: #777777;
+    letter-spacing: 0.5px;
+  }
+
+  > :last-child {
+    margin-right: 10px;
+  }
+}
+
+.subSearch:focus-within {
+  background-color: white;
+  border: 1px solid #eee;
+}
+
+.subNav {
+  position: fixed;
+  top: 0;
+  padding-top: 10px;
+}
+.headerBottom {
+  border: none;
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: 5px;
+  width: 100%;
+  top: 50px;
+}
+
+
