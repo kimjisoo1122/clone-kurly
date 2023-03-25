@@ -9,6 +9,15 @@ const Header = () => {
 
 	const headerBottomRef = useRef();
 	const [subNavOn, setSubNavOn] = useState(false);
+	const subMenuList = [['채소1', '채소2', '채소3', '채소4'], ['육류1', '육류2', '육류3', '육류4']];
+	const [subMenuIndex, setSubMenuIndex] = useState(0);
+	const SubMenu = () => {
+		const listItems = subMenuList[subMenuIndex].map(e => <li>{e}</li>)
+		return <ul>{listItems}</ul>
+	}
+	const handleSubMenuIndex = index => {
+		setSubMenuIndex(index);
+	}
 
 	useEffect(() => {
 		window.addEventListener('scroll', () => {
@@ -22,7 +31,7 @@ const Header = () => {
 		})
 	}, [])
 	return (
-			<>
+			<div style={{backgroundColor: 'white', zIndex: 100}}>
 				<header className={style.headerContainer}>
 					{/*탑링크*/}
 					<div className={style.topLinkContainer}>
@@ -76,7 +85,16 @@ const Header = () => {
 											<FontAwesomeIcon icon={faGripLines}/>
 										</div>
 										<span className={style.categoryTitle}>카테고리</span>
+										<div className={style.categoryMenuContainer}>
+											<ul className={style.categoryMenuList}>
+												<li>채소</li>
+												<li>과일</li>
+												<li>육류</li>
+												<li>생선</li>
+											</ul>
+										</div>
 									</div>
+
 									<div>
 										<ul className={style.categoryList}>
 											<li style={{marginLeft: '80px'}}>신상품</li>
@@ -111,6 +129,30 @@ const Header = () => {
 										<FontAwesomeIcon icon={faGripLines}/>
 									</div>
 									<span className={style.categoryTitle}>카테고리</span>
+									<div className={style.categoryMenuContainer}>
+										<ul className={style.categoryMenuList}>
+
+											<li onMouseOver={() => handleSubMenuIndex(0)}>
+												<img src="/img/categorys/vegetable.png" alt=""/>
+												<span>채소</span>
+												<div className={style.categorySubMenuContainer}>
+													<SubMenu></SubMenu>
+												</div>
+											</li>
+											<li>
+												<img src="/img/categorys/fruit.png" alt=""/>
+												<span>과일</span>
+											</li>
+											<li onMouseOver={() => handleSubMenuIndex(1)}>
+												<img src="/img/categorys/meat.png" alt=""/>
+												<span>육류</span>
+											</li>
+											<li>
+												<img src="/img/categorys/fish.png" alt=""/>
+												<span>생선</span>
+											</li>
+										</ul>
+									</div>
 								</div>
 								<div>
 									<ul className={style.categoryList}>
@@ -128,7 +170,8 @@ const Header = () => {
 					}
 				</header>
 				<div ref={headerBottomRef} className={style.headerBottom}></div>
-			</>
+
+			</div>
 	);
 }
 export default Header;
